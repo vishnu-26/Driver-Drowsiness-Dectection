@@ -53,6 +53,7 @@ while(True):
         # rpred = model.predict_classes(r_eye)
         rpred = (model.predict(r_eye) > 0.5).astype("int32")
         print(rpred)
+        print(type(rpred))
         if(rpred[0][0]==1):
             lbl='Open' 
         if(rpred[0][0]==0):
